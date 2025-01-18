@@ -1,0 +1,14 @@
+name: Start Actions
+on: workflow_dispatch
+
+jobs:
+  linux:
+    name: Building recovery for samsung M01 core
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v1
+
+    - name: building new recovery
+      run: sudo bash run.sh
